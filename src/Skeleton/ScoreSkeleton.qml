@@ -35,13 +35,14 @@ Item {
 
     // Called when the remote is disconnected from score
     function disconnect() {
+
         // Clear trigger, speed, control surface... lists
         scoreTriggers.clearTriggerList()
         scoreSpeeds.clearSpeedList()
         scoreControlSurfaceList.clearControlSurfaceList()
+
         // Reset timeline
         scoreTimeline.stopTimeline()
-
     }
 
     anchors.fill: parent
