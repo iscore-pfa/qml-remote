@@ -21,10 +21,7 @@ Slider {
         target: scoreTimeline
         function onIntervalsMessageReceived(m) {
             var IntervalsObject = m.Intervals
-            if (IntervalsObject[0]) {
-                // The timeline is positioned first in the JSON file
-                time.value = JSON.stringify(IntervalsObject[0].Progress)
-            }
+            time.value = IntervalsObject[0] ? JSON.stringify(IntervalsObject[0].Progress) : 0
         }
     }
 

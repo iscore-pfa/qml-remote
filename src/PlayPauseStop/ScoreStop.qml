@@ -20,14 +20,14 @@ Button {
     // Change the button color when it is pressed
     onPressed: {
         stopButton.state = 'stopOn'
-        if (playPause.isConnected()) {
-            playPause.stopClicked()
-        }
     }
 
     // Specify the behavior of a button when it is clicked on
     onReleased: {
         stopButton.state = ''
+        if (playPause.isConnected()) {
+            playPause.stopClicked()
+        }
         socket.sendTextMessage('{ "Message": "Stop" }')
         scoreTimeline.stopTimeline()
     }
