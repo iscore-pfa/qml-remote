@@ -1,3 +1,8 @@
+/*
+  * Volume of the main scenario :
+  * - not used in the remote for now
+  */
+
 import QtQuick 2.0
 import QtQuick.Layouts 1.12
 

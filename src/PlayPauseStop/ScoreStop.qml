@@ -1,3 +1,12 @@
+/*
+  * Stop button :
+  * - at the top left of the interface with others buttons
+  * - synchronize with score
+  * - stop button pressed :
+  *     - stop in score
+  *     - play button displayed instead of pause button
+  */
+
 import QtQuick 2.0
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.3

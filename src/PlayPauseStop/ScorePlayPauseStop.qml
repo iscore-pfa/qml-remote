@@ -1,5 +1,5 @@
 /*
-  * Contains buttons that allow you to interract with time :
+  * Contains buttons that allow you to interact with time :
   * - Play, Pause buttons
   * - stop button
   * - has 2 states :

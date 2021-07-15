@@ -1,7 +1,7 @@
 /*
   * List of interval speeds  :
   * - at the top right of the interface
-  * - modify a interval speed value in the remote modify
+  * - modify a interval speed value in the remote modifies
   * the value of this interval speed in score
   */
 
@@ -26,7 +26,7 @@ Rectangle {
         target: scoreSpeeds
 
         /* The timeline is a global interval
-          * The name of the timeline changes everytime ossia is refreshed...
+          * The name of the timeline changes each time ossia is refreshed...
           * The timeline should not be added with the other speeds */
         function onIntervalMessageReceived(m) {
             var messageObject = m.Message
@@ -49,7 +49,7 @@ Rectangle {
                 if (JSON.stringify(m.Path) === intervalsListModel.globalSpeedPath) {
                     intervalsListModel.hasStarted = false
                 } else {
-                    //the index of m.Path in the listmodel
+                    //the index of m.Path in the list model
                     var s = Utility.find(intervalsListModel, function (item) {
                         return item.path === JSON.stringify(m.Path)
                     })

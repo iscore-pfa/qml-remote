@@ -62,7 +62,6 @@
         <file>ControlSurface/Controls/Button/ScoreButton.qml</file>
         <file>main.cpp</file>
         <file>main.qml</file>
-        <file>ControlSurface/Controls/Control.qml</file>
         <file>ObjectSkeletons/ScoreSliderSkeleton.qml</file>
         <file>ControlSurface/Controls/Colorpicker/Colorpicker.qml</file>
         <file>ControlSurface/Controls/Colorpicker/ColorSlider.qml</file>

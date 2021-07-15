@@ -1,3 +1,9 @@
+/*
+  * Slider skeleton used by
+  * - ScoreSpeed.qml
+  * - ScoreVolume.qml
+  */
+  
 import QtQuick 2.0
 import QtQuick.Controls 2.12
 

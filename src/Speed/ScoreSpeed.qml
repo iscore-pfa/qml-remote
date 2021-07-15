@@ -1,7 +1,7 @@
 /*
   * Speed of the main scenario :
   * - at the top right of the interface
-  * - modify its value in the remote modify the value in score
+  * - modify its value in the remote modifies the value in score
   */
 
 import QtQuick 2.0
