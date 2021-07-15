@@ -1,10 +1,12 @@
-# qml-remote
+qml-remote
+===
 
 Repository for a project aiming at developing an application, allowing to deport the interface of [ossia-score](https://github.com/ossia/score) on a mobile device, and thus to use the software remotely.
 
 The project aims to deport the use of this software on a mobile connected device. The goal is to allow the user to execute his scenario remotely, and to vary the parameters of his show from the stage, thus avoiding numerous trips to his computer.
 
-## Tree Structure
+Tree Structure
+===
 
 All files are located in the `src/` directory, which itself is divided into several subdirectories :
 
@@ -20,3 +22,17 @@ All files are located in the `src/` directory, which itself is divided into seve
 - **Utility :** Contains some global functions and variables
 - **Volume :** Contains the volume of the main scenario. Does not work at the momenbt
 - **WebSocket :** Contains the file which etablishes the websocket connection
+
+Getting Started
+===
+
+* Download the latest release : https://github.com/ossia/qml-remote/releases/latest
+* Unzip the release
+* Run these commands
+```
+    cd path/to/dir
+    tar -xzvf build-wasm.tar.gz
+    cd build-wasm/
+    python -m SimpleHTTPServer 8087 // python -m http.server 8087 for windows
+```
+* Go to : http://[ipAdress]:8087/PFA11.html
