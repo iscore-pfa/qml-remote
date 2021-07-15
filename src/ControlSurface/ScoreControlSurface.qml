@@ -145,11 +145,11 @@ Column {
                 anchors.rightMargin: 5
                 source: !controlList.visible
                         ? controlSurfaceNameButton.pressed
-                          ? "../Icons/indicator_on.svg"
-                          : "../Icons/indicator.svg"
+                          ? "../Icons/indicator_on.png"
+                          : "../Icons/indicator.png"
                         : controlSurfaceNameButton.pressed
-                          ? "../Icons/indicator_hidden_on.svg"
-                          : "../Icons/indicator_hidden.svg"
+                          ? "../Icons/indicator_hidden_on.png"
+                          : "../Icons/indicator_hidden.png"
             }
         }
 

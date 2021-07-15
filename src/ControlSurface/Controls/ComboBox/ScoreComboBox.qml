@@ -94,31 +94,18 @@ ComboBox {
         }
     }
 
-    indicator: Canvas {
-        id: canvas
+    indicator: Image {
+        id: indicator
 
-        Connections {
-            target: comboBox
-
-            function onPressedChanged() {
-                canvas.requestPaint()
-            }
-        }
-
-        width: 12; height: 8
-        x: comboBox.width - width - comboBox.rightPadding
-        y: comboBox.topPadding + (comboBox.availableHeight - height) / 2
-        contextType: "2d"
-
-        onPaint: {
-            context.reset()
-            context.moveTo(0, 0)
-            context.lineTo(width, 0)
-            context.lineTo(width / 2, height)
-            context.closePath()
-            context.fillStyle = Skin.white
-            context.fill()
-        }
+        width: parent.height; height: parent.height
+        anchors { right: parent.right; verticalCenter: parent.verticalCenter }
+        source: !popup.visible
+                ? comboBox.pressed
+                  ? "../../../Icons/indicator_on.png"
+                  : "../../../Icons/indicator.png"
+                : comboBox.pressed
+                  ? "../../../Icons/indicator_hidden_on.png"
+                  : "../../../Icons/indicator_hidden.png"
     }
 
     contentItem: Text {

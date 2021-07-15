@@ -88,5 +88,9 @@
         <file>Icons/ip_address.svg</file>
         <file>Icons/ip_address_on.png</file>
         <file>Icons/ip_address_on.svg</file>
+        <file>Icons/indicator.png</file>
+        <file>Icons/indicator_hidden.png</file>
+        <file>Icons/indicator_hidden_on.png</file>
+        <file>Icons/indicator_on.png</file>
     </qresource>
 </RCC>
