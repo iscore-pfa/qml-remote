@@ -5,7 +5,7 @@
   * - when the button is pressed: a window appears asking for IP address
   */
 
-import QtQuick 2.0
+import QtQuick 2
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.3
 import QtQuick.Controls.Material 2.3
@@ -48,7 +48,7 @@ Button {
         id: ipDialog
 
         title: "Connection"
-        width: 300; height: 100
+        //width: 300; height: 100
 
         contentItem: Rectangle {
             anchors.fill: parent
@@ -61,6 +61,8 @@ Button {
                 color: Skin.gray1
 
                 Rectangle {
+                    id: text
+
                     width: parent.width; height: 50
                     anchors.top: parent.top
                     color: Skin.gray1
@@ -73,21 +75,37 @@ Button {
                         color: Skin.white
                     }
 
-                    // TextField to enter the IP address
-                    TextField {
-                        id: ipInput
+                    Rectangle {
 
-                        width: parent.width <= 160 ? 65 : 100
-                        anchors { left: ipText.right; leftMargin: 10; verticalCenter: parent.verticalCenter }
-                        text: settings.ip_address
-                        color: Skin.white
+                        width: parent.width <= 160 ? 65 : 100; height: 25
+                        anchors { left: ipText.right; leftMargin: 10; rightMargin: 10; verticalCenter: parent.verticalCenter }
+                        color: Skin.darkGray
+                        border.color: Skin.brown
 
-                        background: Rectangle {
-                            anchors.fill: parent
-                            color: Skin.darkGray
-                            border.color: Skin.brown
+                        TextField {
+                            id: ipInput
+
+                            width: parent.width
+                            placeholderText: "192.168.1.40"
+                            inputMethodHints: Qt.ImhDigitsOnly
+                            //onAccepted: textArea.focus = true
                         }
+
+                        /*
+                        // TextField to enter the IP address
+                        TextInput {
+                            id: ipInput
+
+                            anchors { fill: parent; leftMargin: 5; rightMargin: 5 }
+                            horizontalAlignment: TextInput.AlignLeft; verticalAlignment: TextInput.AlignVCenter
+                            onAccepted: processText()
+                            text: settings.ip_address
+                            color: Skin.white
+                            clip: true
+                        }
+                        */
                     }
+
                 }
 
                 // OK button
@@ -95,7 +113,7 @@ Button {
                     id: okButton
 
                     width: 75; height: 30
-                    anchors { right: cancelButton.left; bottom: parent.bottom; rightMargin: 10 }
+                    anchors { left: text.left; top: text.bottom }
 
                     contentItem: Text {
                         id: okButtonText
@@ -175,7 +193,7 @@ Button {
                     id: cancelButton
 
                     width: 75; height: 30
-                    anchors { right: parent.right; bottom: parent.bottom }
+                    anchors { left: okButton.right; top: okButton.top; leftMargin: 10; rightMargin: 10; }
 
                     contentItem: Text {
                         id: cancelButtonText

@@ -88,5 +88,6 @@
         <file>Icons/ip_address.svg</file>
         <file>Icons/ip_address_on.png</file>
         <file>Icons/ip_address_on.svg</file>
+        <file>Keyboard.qml</file>
     </qresource>
 </RCC>
