@@ -1,7 +1,7 @@
 /*
   * Connection Button :
   * - at the top left of the interface with others buttons
-  * - visible when the remote is disconnected form score
+  * - visible when the remote is disconnected from score
   * - when the button is pressed: a window appears asking for IP address
   */
 

@@ -59,7 +59,7 @@ Colorpicker
 ComboBox
 ControlSurface
 ImpulseButton
-IpAdress
+IpAddress
 NumberBox
 ObjectSkeletons
 PanelBorder
@@ -78,7 +78,7 @@ ScoreControlSurfaceList
 ScoreDisconnection
 ScoreImpulseButton
 ScoreImpulseButtons
-ScoreIpAdress
+ScoreIpAddress
 ScorePlayGlob
 ScorePlayPause
 ScorePlayPauseStop
@@ -99,7 +99,7 @@ ScoreVolume
 ScoreWebSocket
 Uuid
 WebSocket
-adress
+address
 cpp
 ip
 js
@@ -107,3 +107,7 @@ png
 qml
 qresource
 svg
+
+HideButton
+ScoreHideButton
+darkGray
